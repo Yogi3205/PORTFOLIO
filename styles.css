@@ -23,93 +23,105 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
-    transition: all 0.3s ease;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.nav-logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #2563eb;
-    text-decoration: none;
+/* Logo */
+.nav-logo a{
+    font-size:1.5rem;
+    font-weight:700;
+    color:#2563eb;
+    text-decoration:none;
 }
 
+/* Desktop Menu */
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:2rem;
+}
+
+/* Menu Links */
+.nav-link{
+    color:#333;
+    text-decoration:none;
+    font-weight:500;
+    position:relative;
+    transition:color 0.3s;
+}
+
+.nav-link:hover{
+    color:#2563eb;
+}
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#2563eb;
+    transition:width 0.3s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* Hamburger Button */
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+.hamburger i{
+    font-size:28px;
+    color:#333;
+}
+
+/* Mobile Navigation */
 @media (max-width:768px){
 
 .nav-menu{
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-text-align:center;
-max-height:0;
-overflow:hidden;
-transition:0.3s ease;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.35s ease;
+}
+
+.nav-menu li{
+    padding:15px 0;
 }
 
 .nav-menu.active{
-max-height:400px;
-padding:20px 0;
+    max-height:500px;
 }
 
+.hamburger{
+    display:block;
 }
 
-.nav-link {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: #2563eb;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #2563eb;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-    width: 100%;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-.hamburger i{
-font-size:30px;
-color:#333;
-}
-.bar {
-    width: 30px;
-    height: 5px;
-    background: #333;
-    margin: 5px 0;
-    transition: 0.3s;
 }
 
 /* Hero Section */
