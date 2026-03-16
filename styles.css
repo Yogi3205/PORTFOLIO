@@ -84,7 +84,10 @@ body {
     flex-direction: column;
     cursor: pointer;
 }
-
+.hamburger i{
+font-size:30px;
+color:#333;
+}
 .bar {
     width: 25px;
     height: 3px;
