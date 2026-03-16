@@ -81,11 +81,11 @@ body {
 
 .hamburger {
     display: none;
-    flex-direction: column;
+    flex-direction: raw;
     cursor: pointer;
 }
 .hamburger i{
-font-size:50px;
+font-size:30px;
 color:#333;
 }
 .bar {
