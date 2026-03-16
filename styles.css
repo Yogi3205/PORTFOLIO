@@ -81,7 +81,7 @@ body {
 
 .hamburger {
     display: none;
-    flex-direction: raw;
+    flex-direction: column;
     cursor: pointer;
 }
 .hamburger i{
@@ -89,8 +89,8 @@ font-size:30px;
 color:#333;
 }
 .bar {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 5px;
     background: #333;
     margin: 3px 0;
     transition: 0.3s;
