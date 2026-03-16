@@ -78,7 +78,24 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
+@media (max-width:768px){
 
+.nav-menu{
+    position:absolute;
+    top:70px;
+    right:-100%;
+    background:white;
+    flex-direction:column;
+    width:200px;
+    padding:20px;
+    transition:0.3s;
+}
+
+.nav-menu.active{
+    right:0;
+}
+
+}
 .hamburger {
     display: none;
     flex-direction: column;
