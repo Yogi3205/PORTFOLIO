@@ -8,12 +8,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
- <script>
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.querySelector(".nav-menu");
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
-hamburger.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", function(){
+navMenu.classList.toggle("active");
+});
+
 });
 </script>
 <body>
@@ -26,7 +30,7 @@ hamburger.addEventListener("click", function () {
       <a href="#">Yogi Kevadiya</a>
     </div>
 
-    <ul class="nav-menu">
+    <ul class="nav-menu" id="nav-menu">
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#education" class="nav-link">Education</a></li>
@@ -35,7 +39,9 @@ hamburger.addEventListener("click", function () {
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 
-    <div class="menu-btn">☰</div>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
 
   </div>
 </nav>
