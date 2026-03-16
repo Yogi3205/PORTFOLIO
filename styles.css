@@ -46,10 +46,26 @@ body {
     text-decoration: none;
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+@media (max-width:768px){
+
+.nav-menu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+text-align:center;
+max-height:0;
+overflow:hidden;
+transition:0.3s ease;
+}
+
+.nav-menu.active{
+max-height:400px;
+padding:20px 0;
+}
+
 }
 
 .nav-link {
