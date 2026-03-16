@@ -14,16 +14,16 @@ const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 hamburger.addEventListener("click", () => {
-hamburger.classList.toggle("active");
-navMenu.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("active");
 });
 
-navLinks.forEach(link =>
-link.addEventListener("click", () => {
-navMenu.classList.remove("active");
-hamburger.classList.remove("active");
-})
-);
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+});
 </script>
 <body>
     <!-- Navigation -->
