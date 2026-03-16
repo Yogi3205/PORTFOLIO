@@ -9,16 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <script>
-document.addEventListener("DOMContentLoaded", function(){
-
 const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
 
-hamburger.addEventListener("click", function(){
+hamburger.addEventListener("click", () => {
+hamburger.classList.toggle("active");
 navMenu.classList.toggle("active");
 });
 
-});
+navLinks.forEach(link =>
+link.addEventListener("click", () => {
+navMenu.classList.remove("active");
+hamburger.classList.remove("active");
+})
+);
 </script>
 <body>
     <!-- Navigation -->
