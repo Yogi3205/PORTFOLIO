@@ -51,7 +51,7 @@ body {
 .nav-menu{
 display:flex;
 list-style:none;
-gap:2rem;
+gap:1rem;
 
 /* dropdown animation */
 flex-direction:column;
@@ -71,7 +71,7 @@ transition:max-height 0.35s ease;
 
 /* menu items spacing */
 .nav-menu li{
-padding:15px 0;
+padding:8px 0;
 }
 
 /* open menu */
